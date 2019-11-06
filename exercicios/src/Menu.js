@@ -6,8 +6,18 @@ import Simples from './components/Simples'
 import ParImpar from './components/ParImpar'
 import Inverter, { MegaSena } from './components/Multi'
 import Contador from './components/Contador'
+import Plataformas from './components/Plataformas'
+import ValidarProps from './components/ValidarProps'
 
 const MenuRoutes = {
+    ValidarProps: {
+        screen: () => <ValidarProps ano={2019} />,
+        navigationOptions: { title: 'Validar Props' }
+    },
+    Plataformas: {
+        screen: () => <Plataformas />,
+        navigationOptions: { title: 'Plataformas' }
+    },
     Contador: {
         screen: () => <Contador numeroInicial={0}/>,
         navigationOptions: { title: 'Contador' }
