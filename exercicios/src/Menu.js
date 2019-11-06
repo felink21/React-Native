@@ -8,8 +8,23 @@ import Inverter, { MegaSena } from './components/Multi'
 import Contador from './components/Contador'
 import Plataformas from './components/Plataformas'
 import ValidarProps from './components/ValidarProps'
+import Evento from './components/Evento'
+import Avo from './components/ComunicacaoDireta'
+import TextoSincronizado from './components/ComunicacaoIndireta'
 
 const MenuRoutes = {
+    TextoSincronizado: {
+        screen: () => <TextoSincronizado />,
+        navigationOptions: { title: 'Texto Sincronizado' }
+    },
+    Avo: {
+        screen: () => <Avo nome='João' sobrenome='Silva' />,
+        navigationOptions: { title: 'Avo' }
+    },
+    Evento: {
+        screen: () => <Evento />,
+        navigationOptions: { title: 'Evento' }
+    },
     ValidarProps: {
         screen: () => <ValidarProps ano={2019} />,
         navigationOptions: { title: 'Validar Props' }
