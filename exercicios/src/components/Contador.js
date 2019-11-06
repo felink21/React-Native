@@ -12,9 +12,18 @@ export default class Contador extends Component {
             <View>
                 <Text style={{fontSize: 40}}>{this.state.numero}</Text>
                 <TouchableHighlight
-                    onPress={this.maisUm}
+                    onPress={this.maisUm} >
+                    <Text>Incrementar</Text>
+                </TouchableHighlight>
+
+                <TouchableHighlight
+                    onPress={this.menosUm} >
+                    <Text>Decrementar</Text>
+                </TouchableHighlight>
+
+                <TouchableHighlight
                     onLongPress={this.limpar}>
-                    <Text>Incrementar/Zerar</Text>
+                    <Text>Zerar (segurar)</Text>
                 </TouchableHighlight>
             </View>
         )
@@ -23,6 +32,12 @@ export default class Contador extends Component {
     maisUm = () => {
         this.setState({
             numero: this.state.numero + 1
+        })
+    }
+
+    menosUm = () => {
+        this.setState({
+            numero: this.state.numero - 1
         })
     }
 
