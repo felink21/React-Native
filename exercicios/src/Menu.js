@@ -5,8 +5,13 @@ import { createBottomTabNavigator } from 'react-navigation-tabs'
 import Simples from './components/Simples'
 import ParImpar from './components/ParImpar'
 import Inverter, { MegaSena } from './components/Multi'
+import Contador from './components/Contador'
 
 const MenuRoutes = {
+    Contador: {
+        screen: () => <Contador numeroInicial={0}/>,
+        navigationOptions: { title: 'Contador' }
+    },
     MegaSena: {
         screen: () => <MegaSena numeros={8} />,
         navigationOptions: { title: 'Mega Sena'}
@@ -24,7 +29,7 @@ const MenuRoutes = {
 }
 
 const MenuConfig = {
-    initialRouteName: 'MegaSena',
+    initialRouteName: 'Contador',
     tabBarOptions: {
          showLabel: true,
     }
