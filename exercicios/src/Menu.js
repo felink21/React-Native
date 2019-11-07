@@ -11,8 +11,18 @@ import ValidarProps from './components/ValidarProps'
 import Evento from './components/Evento'
 import Avo from './components/ComunicacaoDireta'
 import TextoSincronizado from './components/ComunicacaoIndireta'
+import ListaFlex from './components/ListaFlex'
+import Flex from './components/Flex'
 
 const MenuRoutes = {
+    Flex: {
+        screen: () => <Flex />,
+        navigationOptions: { title: 'Figura' }
+    },
+    ListaFlex: {
+        screen: () => <ListaFlex />,
+        navigationOptions: { title: 'Flex' }
+    },
     TextoSincronizado: {
         screen: () => <TextoSincronizado />,
         navigationOptions: { title: 'Texto Sincronizado' }
@@ -54,7 +64,7 @@ const MenuRoutes = {
 }
 
 const MenuConfig = {
-    initialRouteName: 'Contador',
+    initialRouteName: 'Flex',
     tabBarOptions: {
          showLabel: true,
     }
