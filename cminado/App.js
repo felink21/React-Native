@@ -6,7 +6,7 @@ import Field from './src/components/Field'
 export default class App extends Component {
   render() {
     return (
-      <View>
+      <View style={styles.container}>
         <Text>Campo Minado</Text>
         <Text>
           Tamanho da grade: {params.getRowsAmount()}x{params.getColumnsAmount()}
@@ -23,11 +23,18 @@ export default class App extends Component {
         <Field mined opened exploded />
         <Field flagged />
         <Field flagged opened />
+        <Field flagged bigger />
       </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
-
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    //justifyContent: 'space-around',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF'
+  }
 })
